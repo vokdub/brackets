@@ -1,1 +1,21 @@
-)))
+def check(string, list=[]):
+    for i in string:
+        try:
+            if i == '{' or i =='(' or i =='[':
+                list.append(i)
+            elif i == '}' and list[len(list)-1] == '{':
+                list.pop(len(list)-1)
+
+            elif i == ')' and list[len(list)-1] == '(':
+                list.pop(len(list)-1)
+
+            elif i == ']' and list[len(list)-1] == '[':
+                list.pop(len(list)-1)
+
+        except IndexError:
+            return False
+   
+    if len(list) == 0:
+        return True
+    else:
+        return False
