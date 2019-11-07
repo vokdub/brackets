@@ -1,2 +1,2 @@
 # brackets
-#programm checks brackets and returns true if its set right
+#program checks brackets and returns true if its set right
